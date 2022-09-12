@@ -47,7 +47,9 @@ private final PasswordEncoder passwordEncoder;
                 .anyRequest()
                 .authenticated()
                 .and()
-                .formLogin();
+                .formLogin()
+                .loginPage("/login").permitAll()
+                .defaultSuccessUrl("/courses", true);
 //                .httpBasic();
         return http.build();
 
