@@ -49,7 +49,7 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
     protected void successfulAuthentication(HttpServletRequest request,
                                             HttpServletResponse response,
                                             FilterChain chain, Authentication authResult) throws IOException, ServletException {
-        String key = "vincevincevincevincevincevincevincevince";
+        String key = "vincevincevincevincevincevincevincevincevincevincevincevincevincevincevincevincevincevince";
         String token = Jwts.builder()
                 .setSubject(authResult.getName())
                 .claim("authorities", authResult.getAuthorities())
